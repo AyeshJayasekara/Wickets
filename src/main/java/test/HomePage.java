@@ -30,7 +30,7 @@ public class HomePage extends WebPage {
 			@Override
 			public void onClick() {
 				//we redirect browser to another page.
-				setResponsePage(AnotherFile.class);
+				setResponsePage(SiteLayoutInherited.class);
 			}
 		});
 
