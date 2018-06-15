@@ -3,6 +3,7 @@ package test;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.link.Link;
 
 /**
  * Homepage
@@ -25,6 +26,13 @@ public class HomePage extends WebPage {
 
         // Add the simplest type of label
         add(new Label("message", "If you see this message wicket is properly configured and running"));
+		add(new Link("id"){
+			@Override
+			public void onClick() {
+				//we redirect browser to another page.
+				setResponsePage(AnotherFile.class);
+			}
+		});
 
         // TODO Add your page's components here
     }
